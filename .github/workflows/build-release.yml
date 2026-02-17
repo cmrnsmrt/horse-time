@@ -4,6 +4,10 @@ on:
   release:
     types: [published]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   build-mac:
     runs-on: macos-latest
@@ -27,9 +31,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: dist/*.dmg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build-windows:
     runs-on: windows-latest
@@ -55,6 +56,3 @@ jobs:
           files: |
             dist/*.exe
             dist/*.nsis.7z
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
