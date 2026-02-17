@@ -1,8 +1,10 @@
-name: Build and attach to Release
+name: Build
 
 on:
-  release:
-    types: [published]
+  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
   build-mac:
@@ -22,13 +24,6 @@ jobs:
       
       - name: Build application
         run: npm run dist
-      
-      - name: Upload release assets
-        uses: softprops/action-gh-release@v1
-        with:
-          files: dist/*.dmg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build-windows:
     runs-on: windows-latest
@@ -47,12 +42,3 @@ jobs:
       
       - name: Build application
         run: npm run dist
-      
-      - name: Upload release assets
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            dist/*.exe
-            dist/*.nsis.7z
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

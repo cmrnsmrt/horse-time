@@ -9,9 +9,13 @@ Minimal cross-platform electron app, that provides ___horse time___ when necessa
 - **Node.js & npm** (tested with Node 18+). Install via Homebrew: `brew install node`.
 - **horse**. A different horse, if wanted. One has been included to make your life easy.
 
-**Install from dmg**
+**Run from dmg (macos)**
 
-Download the dmg from the latest release, open the dmg and drag the horse-time app into the applications folder.
+Download the dmg from the latest release, open the dmg and drag the horse-time app into the applications folder. 
+
+**Run from exe (windows)**
+
+Download the exe from the latest release, open the exe.
 
 **Install dependencies and run (development)**
 
