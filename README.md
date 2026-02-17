@@ -1,6 +1,6 @@
 # Horse Time
 
-
+![Horse Time](horse-time.png)
 
 Minimal cross-platform electron app, that provides ___horse time___ when necessary.
 
