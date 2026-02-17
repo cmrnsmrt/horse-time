@@ -42,3 +42,10 @@ jobs:
       
       - name: Build application
         run: npm run dist
+
+    comment-pr:
+      uses: marocchino/sticky-pull-request-comment@v2
+      depends-on: [build-mac, build-windows]
+      with:
+        message: |
+          Builds completed for PR #${{ github.event.pull_request.number }}. No issues found.
