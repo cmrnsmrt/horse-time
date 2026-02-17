@@ -9,14 +9,6 @@ Minimal cross-platform electron app, that provides ___horse time___ when necessa
 - **Node.js & npm** (tested with Node 18+). Install via Homebrew: `brew install node`.
 - **horse**. A different horse, if wanted. One has been included to make your life easy.
 
-**Run from dmg (macos)**
-
-Download the dmg from the latest release, open the dmg and drag the horse-time app into the applications folder. 
-
-**Run from exe (windows)**
-
-Download the exe from the latest release, open the exe.
-
 **Install dependencies and run (development)**
 
 Open a terminal and run:
@@ -37,3 +29,23 @@ Close the window or press the custom `x` button to quit horse time (you probably
 # Inspiration
 
 [The horse](https://www.instagram.com/p/DUg1VTgjdRO/).
+
+**Installing on macOS**
+
+If macOS reports the app as "damaged and cannot be opened":
+
+- Right-click the app in Finder → Open → click Open.
+- To remove the quarantine attribute for a trusted download:
+
+```bash
+# For a mounted DMG
+hdiutil attach /path/to/Horse-Time.dmg
+xattr -r -d com.apple.quarantine /Volumes/<MountName>/*.app
+
+# For the installed app
+xattr -r -d com.apple.quarantine /Applications/Horse\ Time.app
+```
+
+**Running on Windows**
+
+Download the exe from the latest release, open the exe.
