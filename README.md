@@ -26,10 +26,6 @@ npm run start
 
 Close the window or press the custom `x` button to quit horse time (you probably won't want to).
 
-# Inspiration
-
-[The horse](https://www.instagram.com/p/DUg1VTgjdRO/).
-
 **Installing on macOS**
 
 If macOS reports the app as "damaged and cannot be opened":
@@ -49,3 +45,7 @@ xattr -r -d com.apple.quarantine /Applications/Horse\ Time.app
 **Running on Windows**
 
 Download the exe from the latest release, open the exe.
+
+# Inspiration
+
+[The horse](https://www.instagram.com/p/DUg1VTgjdRO/).
