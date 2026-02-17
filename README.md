@@ -30,16 +30,10 @@ Close the window or press the custom `x` button to quit horse time (you probably
 
 If macOS reports the app as "damaged and cannot be opened":
 
-- Right-click the app in Finder → Open → click Open.
-- To remove the quarantine attribute for a trusted download:
+- Open the dmg, drag the app to the applications folder to install then run:
 
 ```bash
-# For a mounted DMG
-hdiutil attach /path/to/Horse-Time.dmg
-xattr -r -d com.apple.quarantine /Volumes/<MountName>/*.app
-
-# For the installed app
-xattr -r -d com.apple.quarantine /Applications/Horse\ Time.app
+xattr -r -d com.apple.quarantine /Applications/horse-time.app
 ```
 
 **Running on Windows**
