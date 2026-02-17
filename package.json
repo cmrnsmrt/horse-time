@@ -1,0 +1,24 @@
+{
+  "name": "horse-time",
+  "version": "1.0.0",
+  "description": "Cross-platform Electron app that displays a scheduled Horse Moment.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.cmrnsmrt.horse-time",
+    "mac": {
+      "target": ["dmg"],
+      "icon": "assets/horse.icns"
+    },
+    "win": {
+      "target": ["nsis", "portable"]
+    }
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0"
+  }
+}

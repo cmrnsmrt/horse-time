@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Horse Time</title>
+    <style>
+      html,body { height:100%; margin:0; font-family: Tahoma, 'Segoe UI', Arial, sans-serif; background: transparent; display:flex; align-items:center; justify-content:center; }
+      .center { height:100%; display:flex; align-items:center; justify-content:center; }
+      .win { width:760px; background: #c7c7c7; border:4px solid #111; box-shadow: none; }
+
+      .titlebar { height:44px; background:#002a9f; color:#fff; display:flex; align-items:center; justify-content:space-between; padding:6px 8px; box-sizing:border-box; -webkit-app-region: drag; }
+      .title-left { display:flex; align-items:center; gap:8px; }
+      .title-text { font-weight:700; font-size:16px; color:#fff; }
+      .title-right { display:flex; gap:6px; }
+
+      .icon { width:28px; height:28px; image-rendering: pixelated; }
+
+      .btn { width:28px; height:28px; background:#e6e6e6; color:#111; display:flex; align-items:center; justify-content:center; border:2px solid #777; font-weight:700; -webkit-app-region: no-drag; cursor:default; }
+      .btn:hover { background:#d6d6d6; }
+
+      .content { display:flex; padding:26px; gap:24px; }
+
+      .left { flex:1; color:#111; font-size:20px; }
+      .right { width:320px; display:flex; align-items:center; justify-content:center; }
+
+      .message { font-family: 'MS Sans Serif', Tahoma, Arial, sans-serif; letter-spacing:0.6px; margin-bottom:18px; }
+      .message.title { font-size:22px; font-weight:600; }
+      .message.block { font-size:18px; }
+      .message.bottom { margin-top:36px; font-size:18px; }
+
+      .horse-large { width:300px; height:auto; image-rendering: pixelated; }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="win">
+        <div class="titlebar">
+          <div class="title-left">
+            <div class="title-text">Scheduled_Horse_Moment.Exe</div>
+          </div>
+          <div class="title-right">
+            <div id="helpBtn" class="btn">?</div>
+            <div id="closeBtn" class="btn">✕</div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="left">
+            <div class="message title">Please stand by for a scheduled Horse Moment.</div>
+
+            <div class="message block">
+              You will now contemplate and reflect.
+              This is a time of seriousness.
+            </div>
+
+            <div class="message bottom">
+              You currently have scheduled Horse Moments turned on.
+              You cannot change this in settings.
+            </div>
+          </div>
+
+          <div class="right">
+            <img class="horse-large" src="assets/horse.png" alt="pixel horse large" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('closeBtn').addEventListener('click', () => {
+        window.close();
+      });
+      document.getElementById('helpBtn').addEventListener('click', () => {
+        alert('Scheduled Horse Moment Help\n\nThere is no help needed. Please enjoy your Horse Moment.');
+      });
+    </script>
+  </body>
+</html>
